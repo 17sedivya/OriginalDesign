@@ -18,16 +18,23 @@ void setup()
   size(400,400);
   frameRate(10);
 }
-void draw()
+void circle()
 {
-  noStroke();
   circleLeft = circleLeft - 25;
   circleRight = circleRight - 25;
+}
+void pigment()
+{
   colorRed = colorRed + 10;
   colorGreen = colorGreen - 20;
   colorBlue = colorBlue - 25;
   fill(colorRed, colorGreen, colorBlue);
+}
+void draw()
+{
+  noStroke();
+  circle();
+  pigment();
  ellipse(200,200,circleLeft ,circleRight);
 
 }
-
